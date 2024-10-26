@@ -1,0 +1,171 @@
+.fixHeightwhileNoImg{
+  height: 70vh;
+  background-color: rgba(255, 238, 206);
+}
+.movieFrame{
+  width: 100%;
+  min-height: 70vh;
+  padding: 0;
+  .movieFrame__gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "titleArea titleArea titleArea"
+      "imgArea plotArea plotArea"
+      "imgArea languageArea languageArea"
+      "imgArea actorsArea ratingsArea"
+      "emptyArea awardsArea awardsArea"
+      ;  
+    align-items: center;
+    border-top: 1px solid rgb(163, 163, 163);
+    border-left: 1px solid rgb(163, 163, 163);
+     .movieFrame__titleArea{
+      width: 100%;
+      height: 100%;
+      grid-area: titleArea;
+      text-align: center;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+      padding: 1.5rem 0;
+      }
+    .movieFrame__imgArea{
+      height: 100%;
+      grid-area: imgArea;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+      place-content: center;
+    }
+    .movieFrame__plotArea{
+      width: 100%;
+      height: 100%;
+      grid-area: plotArea;
+      margin: auto;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+      place-content: center;
+      .movieFrame__plotArea__plot{
+        width: 80%;
+        margin: auto;
+      }
+      .movieFrame__plotArea__director{
+        width: 80%;
+        margin: 1rem auto;
+      }
+    }
+    .movieFrame__languageArea{
+      width: 100%;
+      height: 100%;
+      grid-area: languageArea;
+      margin: auto;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+      place-content: center;
+      margin: 1rem auto;
+      .movieFrame__languageArea__contents{
+        width: 80%;
+        margin: auto;
+      }
+    }
+    .movieFrame__actorsArea{
+      width: 100%;
+      height: 100%;
+      grid-area: actorsArea;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+      place-content: center;
+      .movieFrame__actorsArea__Contents{
+        width: 80%;
+        height: 80%;
+        margin-left: auto;
+        margin-top: auto;
+      }
+    }
+    .movieFrame__ratingsArea{
+      width: 100%;
+      height: 100%;
+      grid-area: ratingsArea;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+      place-content: center;
+      .movieFrame__ratingsArea__contents{
+        width: 90%;
+        height: 80%;
+        margin-left: auto;
+        margin-top: auto;
+        margin: 1rem 0.5rem 1rem 0.5rem!important;
+      }
+    }
+    .movieFrame__emptyArea{
+      width: 100%;
+      height: 100%;
+      grid-area: emptyArea;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+    }
+    .movieFrame__awardsArea{
+      width: 100%;
+      height: 100%;
+      grid-area: awardsArea;
+      border-right: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid rgb(163, 163, 163);
+      padding: 1.5rem 0;
+      .movieFrame__awardsArea__contents {
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:768px){
+  .fixHeightwhileNoImg{
+    height: 40vh;
+  }  
+  .movieFrame{
+    width: 90%;
+    margin: auto;
+    .movieFrame__gridContainer{
+      display: grid;
+      grid-template-columns: 1fr 1fr !important;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "titleArea titleArea"
+        "imgArea imgArea"
+        "plotArea plotArea"
+        "languageArea languageArea"
+        "actorsArea ratingsArea"
+        "awardsArea awardsArea"
+        !important;
+      .movieFrame__plotArea{
+        margin: 1rem auto;
+      }
+      .movieFrame__languageArea{
+        margin: 1rem auto;
+      }
+      .movieFrame__actorsArea{
+        margin: 1rem auto;
+      }
+      .movieFrame__awardsArea{
+        border-bottom: 1px solid rgb(163, 163, 163);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:430px){
+  .movieFrame{
+    width: 100%;
+    .movieFrame__actorsArea{
+      .movieFrame__actorsArea__Contents{
+        width: 90% !important;
+      }
+    }
+    .movieFrame__ratingsArea{
+//      margin: 1rem;
+      .movieFrame__ratingsArea__contents{
+        width: 100% !important;
+        margin: 1rem 0.5rem 1rem 0.5rem!important;
+      }
+    }
+  } 
+}

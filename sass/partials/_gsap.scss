@@ -1,0 +1,25 @@
+.firstPage{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(255, 238, 206);
+  place-content: center;
+  .firstAnimationContainer{
+    text-align: center;
+    .firstAnimation{
+      opacity: 0;
+      transform: scaleY(0);
+    }
+  }
+}
+
+.secondAnimation{
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.thirdAnimation{
+  opacity: 0;
+//  transform: translateY(-500px);
+}

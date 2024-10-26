@@ -1,0 +1,16 @@
+.footer{
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  border-top: 1px solid rgb(234, 234, 234);
+  background-color: rgba(255, 238, 206);
+
+}
+
+@media only screen and (max-width:430px){
+  .footer{
+    h2{
+      font-size: 16px !important;
+    }
+  }
+}
