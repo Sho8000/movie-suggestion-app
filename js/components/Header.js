@@ -18,7 +18,7 @@ export class Header extends Component {
         return movieItems;
     }
     async getMovie(title) {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=a152b50f&t=${title}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=a152b50f&t=${title}`);
         if (!response.ok) {
             throw new Error("Something went wrong while getting movie");
         }
